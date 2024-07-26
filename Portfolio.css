@@ -1,0 +1,494 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background-color: #0a0202;
+    color: #fff;
+}
+#name{
+    font-size: 70px;
+    letter-spacing: 3px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: wheat;
+    
+}
+
+#name span{
+    background-color: wheat;
+    color: black;
+}
+
+#header{
+    height: 100vh;
+    width: 100%;
+}
+
+.container{
+    padding: 10px 10%;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 22px;
+    position: relative;
+}
+
+nav ul li a::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: wheat;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+
+nav ul li a:hover::after{
+    width: 100%;
+}
+.Header-Text{
+    padding: 260px;
+    font-size: 35px;
+    text-align: center;
+}
+
+.Header-Text h1{
+    color: wheat;
+    overflow: hidden; /* Ensures the text stays within the container */
+    border-right: .15em solid white; /* Creates the blinking cursor effect */
+    white-space: nowrap; /* Prevents text wrapping */
+    margin: 0 auto; /* Centers the container */
+    animation: typing 4s steps(40, end), blink-caret .75s step-end infinite;
+}
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: white; }
+}
+
+.Header-Text span{
+    background-color: wheat;
+    color: #130404;
+}
+
+.about{
+    color: wheat;
+    padding: 60px;
+}
+.row{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.about-col-1{
+    flex-basis: 35%;
+    transition: transform 0.5s;
+    cursor: pointer;
+}
+
+.about-col-1:hover img{
+    transform: scale(1.1);
+}
+
+.about-col-1 img{
+    width: 100%;
+    height: auto;
+    border-radius: 500px;/*used to give the corner of the image a roundy shape*/
+    
+    padding: 14px;
+}
+
+.about-col-2{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.about-col-2 p{
+    background: rgba(100, 79, 79, 0.521);
+    transition: background 0.5s, transform 0.5s;
+}
+
+.about-col-2 p:hover{
+    background-color: rgba(245, 222, 179, 0.253);
+    transform: translateY(-10px);
+}
+.sub-title{
+  flex-basis: 80%;
+  color: wheat;
+  border: 5px solid rgb(141, 124, 92);
+  padding: 15px;
+  padding-right: 70px;
+  padding-left: 70px;
+  font-size: 40px;
+  font-weight: 1000;
+  background-color: rgba(245, 222, 179, 0.253);
+  text-align: center;
+  margin: 30px;
+  cursor: pointer;
+  transition: background 0.5s, transform 0.5s;
+}
+
+.sub-title:hover{
+    background: rgba(245, 222, 179, 0.253);
+    transform: translateY(-10px);
+}
+
+.about-col-2 p{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: wheat;
+    font-size: 30px;
+    padding: 25px;
+    margin : 10px;
+    height: auto;
+    text-align: center;
+    background-color: rgba(245, 222, 179, 0.253);;
+  }
+  .tab-title{
+    display: flex;
+    margin-right: auto;
+    justify-content: center; /* Center the tabs horizontally */
+    flex-wrap: wrap; /* Allow the tabs to wrap if they overflow */
+  }
+
+  .tab-link{
+    padding: 20px;
+    font-weight: 2000;
+    cursor: pointer;
+    position: relative;
+    width: 450px;
+    font-size: 50px;
+    color: wheat;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    transition: background 0.5s, transform 0.5s;
+  }
+
+  .tab-link:hover{
+    background: rgba(245, 222, 179, 0.253);
+    transform: translateY(-10px);
+  }
+  .tab-link::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    bottom: -8px;
+    left: 0;
+    background: wheat;
+    position: absolute;
+    transition: 1ms;
+  }
+  .tab-link.after-Link::after{
+    width: 45%;
+  }
+  .tab-content{
+    padding: 20px 80px;
+    font-size: 25px;
+    color: rgb(228, 214, 188);
+    display: none;
+  }
+.li2{
+    margin-top: 10px;
+}
+a{
+    color: wheat;
+    text-decoration: none;
+    font-weight: 700;
+}
+.tab-content.active-tab{
+    display: block;
+}
+
+/*------------------Services---------------*/
+
+#services{
+    padding: 30px 0;
+}
+.services-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+    font-size: large;
+    padding: 0 30px;
+    color: white;
+}
+.services-list a{
+    font-weight: 1000;
+}
+
+.services-list div{
+    background-color: rgba(100, 79, 79, 0.521);
+    padding: 40px;
+    font-weight: 300;
+    border-radius: 30px;
+    transition: background 0.5s, transform 0.5s;
+}
+
+.services-list div i{
+    font-size: 40px;
+}
+
+.services-list div:hover{
+    background: rgba(245, 222, 179, 0.253);
+    transform: translateY(-10px);
+}
+
+#portfolio{
+    padding: 50px 0;
+    font-size: large;
+}
+
+#portfolio h2{
+    margin-left: 0;
+    color: wheat;
+    font-weight: 300;
+}
+
+#portfolio div p{
+    margin-top: 15px;
+    color: white;
+    font-weight: 300;
+    display: inline-block;
+}
+
+#portfolio div i{
+    font-size: 45px;
+ 
+}
+
+/*-----------contact----------*/
+
+#contact{
+    margin-top: 20px;
+}
+
+.contact-left{
+    flex-basis: 35%;
+    font-size: 20px;
+    margin-left: auto;
+    
+}
+
+.contact-left p{
+    text-align: center;
+    padding: 2px;
+}
+
+.contact-left a i{
+    text-align: center;
+}
+
+.contact-left p i{
+    color: wheat;
+    
+}
+
+.contact-right{
+    flex-basis: 60%;
+    font-size: 30px;
+}
+
+.contact-right button{
+    font-size: 25px;
+    color: wheat;
+    padding: 0 25px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.social-icons{
+    font-size: 30px;
+    margin-top: 15px;
+}
+
+.btn.btn2{
+    display: inline-block;
+    background: rgba(245, 222, 179, 0.253);
+    padding: 15px;
+    margin-top: 15px;
+}
+
+.contact-right form{
+    width: 100%;
+}
+
+form input, form textarea{
+    width: 100%;
+    border: 0;
+    padding: 20px;
+    outline: none;
+    margin: 15px 0;
+    font-size: 20px;
+    background: #311313b6;
+    border-radius: 10px;
+    color: wheat;
+}
+
+#submit{
+    cursor: pointer;
+    font-size: 25px;
+    margin-top: 0;
+    transition: background 0.5s, transform 0.5s;
+}
+
+#submit:hover{
+    background-color: rgba(245, 222, 179, 0.253);
+    transform: translateY(-10px);
+}
+
+.copyright{
+    text-align: center;
+    width: 100%;
+    background: rgba(245, 222, 179, 0.253) ;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+/*----------------css for smaller screens and max width--------------*/
+
+nav .fa-sharp-duotone{
+    display: none;
+}
+
+nav .fa-solid{
+    display: none;
+}
+
+@media only screen and (max-width: 700px) {
+    .Header-Text {
+        padding: 50px 20px; /* Reduce padding for smaller screens */
+        font-size: 25px; /* Adjust font size */
+    }
+    
+    .Header-Text h1 {
+        font-size: 25px; /* Reduce the font size of the h1 */
+        border-right: .1em solid white; /* Adjust border width for smaller text */
+        animation: typing 3s steps(30, end), blink-caret .75s step-end infinite; /* Adjust typing animation */
+    }
+
+    .sub-title{
+        text-align: center;
+        font-size: 25px;
+    }
+    q{
+        font-size: 20px;
+    }
+
+    *{
+        margin-left: 10px;
+       
+    }
+
+    #about h1{
+        margin-left: 95px;
+    }
+
+    .about-col-2 p{
+        margin-left: 65px;
+    }
+
+    .contact-right form{
+        text-align: center;
+        margin-left: 93px;
+        margin-right: 380px;
+        width: 72%;
+    }
+
+    .sub-title{
+        margin-left: 60px;
+    }
+
+    .tab-content{
+        font-size: 18px;
+    }
+
+    #services h1{
+        text-align: center;
+        padding: 10px 25px;
+        padding-right: 200px;
+        padding-left: 30px;
+        margin-left: 40px;
+        font-size: 25px;
+    }
+
+    #portfolio h1{
+        padding-right: 190px;
+        margin-left: 30px;
+       
+    }
+    nav .fa-sharp-duotone{
+        display: block;
+        font-size: 25px;
+
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
+    
+    nav .fa-solid{
+        display: block;
+        font-size: 25px;
+        position: absolute;
+        right: -100px;
+        color: wheat;
+    }
+
+    nav ul{
+        background: #130404;
+        position: fixed;
+        top: 0;
+        right: -200px;/* -200 because width is -200px. so if we want to hide it then we can just adjust it with the wwidth*/
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 2;
+        transition: right 0.5s;
+    }
+
+    nav ul li{
+        display: block;
+        margin: 25px;
+        font-size: 20px;
+    }
+
+    .about-col-1 img{
+        height: 240px;
+        width: 240px;
+        display: inline-flex;
+        margin-left: 70px;
+    }
+
+    .copyright{
+        font-size: 15px;
+    }
+}
+#msg{
+    color: white;
+    font-size: 20px;
+}
