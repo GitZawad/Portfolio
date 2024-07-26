@@ -79,6 +79,7 @@ nav ul li a:hover::after{
     border-right: .15em solid white; /* Creates the blinking cursor effect */
     white-space: nowrap; /* Prevents text wrapping */
     margin: 0 auto; /* Centers the container */
+    width: fit-content;
     animation: typing 4s steps(40, end), blink-caret .75s step-end infinite;
 }
 @keyframes typing {
